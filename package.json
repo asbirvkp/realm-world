@@ -1,0 +1,16 @@
+    {
+        "name": "realm-world",
+        "version": "1.0.0",
+        "type": "module",
+        "main": "app.js",
+        "scripts": {
+            "start": "node app.js"
+        },
+        "dependencies": {
+            "express": "^4.17.1"
+        },
+        "description": "<div align=\"center\">",
+        "keywords": [],
+        "author": "",
+        "license": "ISC"
+    }
