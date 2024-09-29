@@ -1,0 +1,26 @@
+{
+    "thisWeek": {
+        "title": "This Week PNL",
+        "value": 52345,
+        "dateRange": "23 Sep - 27 Sep",
+        "percentage": 75
+    },
+    "lastWeek": {
+        "title": "Last Week PNL",
+        "value": 46168,
+        "dateRange": "16 Sep - 20 Sep",
+        "percentage": 68
+    },
+    "monthly": {
+        "title": "Monthly PNL",
+        "value": 198765,
+        "dateRange": "1 Sep - 30 Sep",
+        "percentage": 380
+    },
+    "yearly": {
+        "title": "Yearly PNL",
+        "value": 2345678,
+        "dateRange": "1 Jan - 31 Dec",
+        "percentage": 9350
+    }
+}

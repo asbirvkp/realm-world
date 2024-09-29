@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realm World</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .pnl-title {
+            font-size: 1.5em;
+            margin-left: 8px;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+  <!-- ------------------------------------------------------------------------------- -->
+                                  <!-- 1  ----- Header -->
+  <!-- ------------------------------------------------------------------------------- -->
+
+    <header class="header" data-header>
+        <div class="container">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <img src="./assets/images/logo.svg" width="32" height="32" alt="Realm World logo">
+                Realm World
+            </a>
+            
+            <!-- Navigation -->
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li><a href="#" class="navbar-link active" data-nav-link>Homepage</a></li>
+                    <li><a href="#" class="navbar-link" data-nav-link>Buy Crypto</a></li>
+                    <li><a href="#" class="navbar-link" data-nav-link>Markets</a></li>
+                    <li><a href="#" class="navbar-link" data-nav-link>Sell Crypto</a></li>
+                    <li><a href="#" class="navbar-link" data-nav-link>Blog</a></li>
+                    <li><a href="#" class="navbar-link" data-nav-link>BITUSDT</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile menu toggle -->
+            <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+            </button>
+
+            <a href="#" class="btn btn-outline">Wallet</a>
+        </div>
+    </header>
+
+    <main>
+        <article>
+
+  <!-- ------------------------------------------------------------------------------- -->
+                                 <!-- 2  ----- Hero Section -->
+  <!-- ------------------------------------------------------------------------------- -->
+
+            <!-- Hero Section -->
+            <section class="section hero" aria-label="hero" data-section>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="h1 hero-title">Your Gateway to Financial Freedom</h1>
+                        <div class="hero-text">
+                            <p>
+                                Let our cutting-edge AI trade for you, maximizing your earnings 24/7 with zero hassle. No experience needed—just real-time control, flexibility, and transparency.
+                            </p>
+                            <p>
+                                Start with just $30 and watch your wealth grow effortlessly while you focus on what truly matters.
+                            </p>
+                            <p>
+                                Join us today and revolutionize your income!
+                            </p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Unlock Your Financial Future</a>
+                    </div>
+                    <figure class="hero-banner">
+                        <img src="./assets/images/hero-banner.png" width="500" height="400" alt="AI-powered financial freedom dashboard" class="w-100">
+                    </figure>
+                </div>
+            </section>
+
+
+   <!-- ------------------------------------------------------------------------------- -->
+                                  <!-- 3  ----- Weekly PNL Section -->
+   <!-- ------------------------------------------------------------------------------- -->
+
+            <!-- Weekly PNL Section -->
+            <section class="pnl-section">
+                <h2 class="section-title">Performance Overview</h2>
+                <ul class="tab-content">
+                    <!-- This Week PNL Card -->
+                    <li class="trend-item">
+                        <div class="trend-card">
+                            <div class="card-title-wrapper">
+                                <h3 class="pnl-title" id="pnlTitle2"></h3>
+                            </div>
+                            <data class="card-value" id="pnlValue2"></data>
+                            <div class="card-analytics">
+                                <span class="trade-date" id="pnlDateRange2"></span>
+                                <div class="badge" id="pnlPercentage2"></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Last Week PNL Card -->
+
+                    <li class="trend-item">
+                        <div class="trend-card">
+                            <div class="card-title-wrapper">
+                                <h3 class="pnl-title" id="pnlTitle"></h3>
+                            </div>
+                            <data class="card-value" id="pnlValue"></data>
+                            <div class="card-analytics">
+                                <span class="trade-date" id="pnlDateRange"></span>
+                                <div class="badge" id="pnlPercentage"></div>
+                            </div>
+                        </div>
+                    </li>
+
+         
+
+                    <!-- Monthly PNL Card -->
+                    <li class="trend-item">
+                        <div class="trend-card">
+                            <div class="card-title-wrapper">
+                                <h3 class="pnl-title" id="pnlTitle3"></h3>
+                            </div>
+                            <data class="card-value" id="pnlValue3"></data>
+                            <div class="card-analytics">
+                                <span class="trade-date" id="pnlDateRange3"></span>
+                                <div class="badge" id="pnlPercentage3"></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Yearly PNL Card -->
+                    <li class="trend-item">
+                        <div class="trend-card">
+                            <div class="card-title-wrapper">
+                                <h3 class="pnl-title" id="pnlTitle4"></h3>
+                            </div>
+                            <data class="card-value" id="pnlValue4"></data>
+                            <div class="card-analytics">
+                                <span class="trade-date" id="pnlDateRange4"></span>
+                                <div class="badge" id="pnlPercentage4"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+
+   <!-- ------------------------------------------------------------------------------- -->
+                            <!-- 4  ----- Trade History Section -->
+   <!-- ------------------------------------------------------------------------------- -->
+
+            <!-- Trade History Section -->
+            <section class="section market" aria-label="market update" data-section>
+                <div class="container">
+                    <div class="title-wrapper">
+                        <h2 class="h2 section-title" style="font-size: 1.5em;">Trade History</h2>
+                        <a href="#" class="btn-link">See All</a>
+                    </div>
+                    <div class="market-tab">
+                        <table class="market-table">
+                            <thead class="table-head">
+                                <tr>
+                                    <td class="table-data">
+                                        <button class="" aria-label="Add to favourite" data-add-to-fav>
+                                            <ion-icon name="" aria-hidden="true" class="icon-outline"></ion-icon>
+                                            <ion-icon name="" aria-hidden="true" class=""></ion-icon>
+                                        </button>
+                                    </td>
+                                    <th class="hide-mobile" scope="col">Date</th>
+                                    <th class="name-header" scope="col" style="text-align: left">Name</th>
+                                    <th class="pnl-header" scope="col" style="text-align: left">PNL</th>
+                                    <th class="hide-mobile" scope="col" style="text-align: left">Open Price</th>
+                                    <th class="hide-mobile" scope="col" style="text-align: left">Closed Price</th>
+                                    <th class="hide-mobile" scope="col" style="text-align: left; padding-left: 12px;">Last 7 Days</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-body">
+                                <!-- Trade History Row (repeated twice) -->
+                                <tr class="table-row">
+                                    <td class="table-data">
+                                        <button class="" aria-label="Add to favourite" data-add-to-fav>
+                                            <ion-icon name="" aria-hidden="true" class="icon-outline"></ion-icon>
+                                            <ion-icon name="" aria-hidden="true" class=""></ion-icon>
+                                        </button>
+                                    </td>
+                                    <th class="table-data rank hide-mobile" scope="row" style="font-size: 14px; color: grey">26/09/2024</th>
+                                    <td class="table-data">
+                                        <div class="wrapper">
+                                            <img src="./assets/images/coin-1.svg" width="20" height="20" alt="Bitcoin logo" class="img">
+                                            <h3>
+                                                <a href="#" class="coin-name">
+                                                    XAUUSD
+                                                    <span class="span" style="color: green">BUY</span>
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </td>
+                                    <td class="table-data last-update green">+20%</td>
+                                    <td class="table-data last-price hide-mobile">$2600</td>
+                                    <td class="table-data market-cap hide-mobile">$2620</td>
+                                    <td class="table-data hide-mobile">
+                                        <img src="./assets/images/chart-1.svg" width="100" height="40" alt="profit chart" class="chart">
+                                    </td>
+                                </tr>
+                                <!-- Repeat this <tr> block once more with different data -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+
+   <!-- ------------------------------------------------------------------------------- -->
+                                  <!-- 5  ----- How It Works Section -->
+   <!-- ------------------------------------------------------------------------------- -->
+
+            <!-- How It Works Section -->
+            <section class="how-it-works">
+                <h2 class="section-title">How It Works</h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-icon">1</div>
+                        <h3 class="step-title">Register</h3>
+                        <p class="step-description">Sign up for an account on our platform in just a few minutes.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">2</div>
+                        <h3 class="step-title">Top Up</h3>
+                        <p class="step-description">Fund your account using your preferred payment method.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">3</div>
+                        <h3 class="step-title">Earn Money</h3>
+                        <p class="step-description">Start earning profits through our automated trading system.</p>
+                    </div>
+                </div>
+            </section>
+
+
+   <!-- ------------------------------------------------------------------------------- -->
+                                  <!-- 5  ----- About Section -->
+   <!-- ------------------------------------------------------------------------------- -->
+
+            <!-- About Section -->
+            <section class="section about" aria-label="about" data-section>
+                <div class="container about-container">
+                    <div class="about-banner-container">
+                        <figure class="about-banner">
+                            <img src="./assets/images/about-banner.png" width="598" height="349" loading="lazy" alt="AI-Powered Trading Platform" class="w-100">
+                        </figure>
+                    </div>
+                    <div class="about-content">
+                        <h2 class="h2 section-title">Revolutionizing Finance with AI</h2>
+                        <p class="section-text">
+                            At Realm World, we're not just another trading platform. We're your gateway to financial freedom, powered by cutting-edge AI technology. Our mission is simple: to make profitable trading accessible to everyone, regardless of experience or background.
+                        </p>
+                        <ul class="section-list">
+                            <li class="section-item">
+                                <div class="title-wrapper">
+                                    <ion-icon name="trending-up" aria-hidden="true"></ion-icon>
+                                    <h3 class="h3 list-title">AI-Driven Success</h3>
+                                </div>
+                                <p class="item-text">
+                                    Our advanced AI algorithms analyze market trends 24/7, making profitable trades on your behalf with unmatched precision.
+                                </p>
+                            </li>
+                            <li class="section-item">
+                                <div class="title-wrapper">
+                                    <ion-icon name="shield-checkmark" aria-hidden="true"></ion-icon>
+                                    <h3 class="h3 list-title">Safety First</h3>
+                                </div>
+                                <p class="item-text">
+                                    Your investments are protected by state-of-the-art security measures. We prioritize the safety of your assets above all else.
+                                </p>
+                            </li>
+                            <li class="section-item">
+                                <div class="title-wrapper">
+                                    <ion-icon name="people" aria-hidden="true"></ion-icon>
+                                    <h3 class="h3 list-title">Community-Driven</h3>
+                                </div>
+                                <p class="item-text">
+                                    Join a thriving community of investors. Share insights, learn from others, and grow together in your financial journey.
+                                </p>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Start Your Journey</a>
+                    </div>
+                </div>
+            </section>
+
+
+   <!-- ------------------------------------------------------------------------------- -->
+                                  <!-- Features Section -->
+   <!-- ------------------------------------------------------------------------------- -->
+
+            <!-- Features Section -->
+            <section class="section features" aria-label="features" data-section>
+                <div class="container">
+                    <h2 class="h2 section-title">Experience the Future of Trading</h2>
+                    <p class="section-text">
+                        Realm World combines cutting-edge AI with user-friendly features to revolutionize your trading experience.
+                    </p>
+                    <div class="features-container">
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <ion-icon name="trending-up-outline" aria-hidden="true"></ion-icon>
+                            </div>
+                            <h3 class="feature-title">AI-Powered Trading</h3>
+                            <p class="feature-description">Our advanced AI algorithms work 24/7 to optimize your trading strategies and maximize returns.</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <ion-icon name="speedometer-outline" aria-hidden="true"></ion-icon>
+                            </div>
+                            <h3 class="feature-title">Live Performance Dashboard</h3>
+                            <p class="feature-description">Monitor your investments in real-time with our comprehensive and intuitive dashboard.</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <ion-icon name="wallet-outline" aria-hidden="true"></ion-icon>
+                            </div>
+                            <h3 class="feature-title">Flexible Deposits & Withdrawals</h3>
+                            <p class="feature-description">Enjoy full control over your funds with easy-to-use deposit and withdrawal options.</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <ion-icon name="phone-portrait-outline" aria-hidden="true"></ion-icon>
+                            </div>
+                            <h3 class="feature-title">Mobile Friendly UI</h3>
+                            <p class="feature-description">Access your portfolio and trade on-the-go with our responsive, mobile-optimized interface.</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <ion-icon name="bar-chart-outline" aria-hidden="true"></ion-icon>
+                            </div>
+                            <h3 class="feature-title">Real-Time Analytics</h3>
+                            <p class="feature-description">Get instant insights into market trends and your portfolio performance with advanced analytics.</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <ion-icon name="stats-chart-outline" aria-hidden="true"></ion-icon>
+                            </div>
+                            <h3 class="feature-title">Performance Overview</h3>
+                            <p class="feature-description">Track your Profit and Loss (PNL) across different timeframes: Weekly, Monthly, and Yearly.</p>
+                        </div>
+                    </div>
+                    <div class="cta-container">
+                        <a href="#" class="btn btn-primary">Start Trading Now</a>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top" data-section>
+            <div class="container">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="./assets/images/logo.svg" width="50" height="50" alt="Realm World logo">
+                        Realm World
+                    </a>
+
+                    <h2 class="footer-title">Let's talk! 🤙</h2>
+
+                    <a href="tel:+123456789101" class="footer-contact-link">+91 9606 799 181</a>
+
+                    <a href="mailto:hello.realmworld@gmail.com" class="footer-contact-link">hello.realmworld@gmail.com</a>
+
+                    <address class="footer-contact-link">
+                        Bangalore, India IN
+                    </address>
+                </div>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title">Products</p>
+                    </li>
+                    <li><a href="#" class="footer-link">AI Trading</a></li>
+                    <li><a href="#" class="footer-link">Portfolio Management</a></li>
+                    <li><a href="#" class="footer-link">Risk Analysis</a></li>
+                    <li><a href="#" class="footer-link">Market Insights</a></li>
+                    <li><a href="#" class="footer-link">Automated Strategies</a></li>
+                </ul>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title">Services</p>
+                    </li>
+                    <li><a href="#" class="footer-link">Deposit Funds</a></li>
+                    <li><a href="#" class="footer-link">Withdraw Earnings</a></li>
+                    <li><a href="#" class="footer-link">Trading Fees</a></li>
+                    <li><a href="#" class="footer-link">Affiliate Program</a></li>
+                    <li><a href="#" class="footer-link">Referral Program</a></li>
+                    <li><a href="#" class="footer-link">API Access</a></li>
+                </ul>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title">Support</p>
+                    </li>
+                    <li><a href="#" class="footer-link">Realm World Academy</a></li>
+                    <li><a href="#" class="footer-link">Help Center</a></li>
+                    <li><a href="#" class="footer-link">User Feedback</a></li>
+                    <li><a href="#" class="footer-link">Submit a request</a></li>
+                    <li><a href="#" class="footer-link">API Documentation</a></li>
+                    <li><a href="#" class="footer-link">Trading Rules</a></li>
+                </ul>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title">About Us</p>
+                    </li>
+                    <li><a href="#" class="footer-link">About Realm World</a></li>
+                    <li><a href="#" class="footer-link">Our Technology</a></li>
+                    <li><a href="#" class="footer-link">Careers</a></li>
+                    <li><a href="#" class="footer-link">Press & Media</a></li>
+                    <li><a href="#" class="footer-link">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">
+                    &copy; 2024 Realm World All Rights Reserved
+                </p>
+
+                <ul class="social-list">
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./assets/js/script.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        function updateTrendCard(data, suffix = '') {
+            document.getElementById(`pnlTitle${suffix}`).textContent = data.title;
+            
+            const percentageElement = document.getElementById(`pnlPercentage${suffix}`);
+            const percentage = calculatePNLPercentage(data.days);
+            percentageElement.textContent = `+${(percentage * 100).toFixed(2)}%`;
+            percentageElement.className = 'card-percentage';
+            
+            // Add a color class based on the percentage
+            if (percentage > 0) {
+                percentageElement.classList.add('positive');
+            } else if (percentage < 0) {
+                percentageElement.classList.add('negative');
+            }
+            
+            document.getElementById(`pnlDateRange${suffix}`).textContent = data.dateRange;
+        }
+
+        // Fetch the PNL data from the JSON file
+        fetch('pnlData.json')
+            .then(response => response.json())
+            .then(data => {
+                // Update the trend cards with the fetched data
+                updateTrendCard(data.lastWeek);
+                updateTrendCard(data.thisWeek, '2');
+                updateTrendCard(data.monthly, '3');
+                updateTrendCard(data.yearly, '4');
+            })
+            .catch(error => console.error('Error fetching PNL data:', error));
+    </script>
+</body>
+</html>
