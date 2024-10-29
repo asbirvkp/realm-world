@@ -1,6 +1,4 @@
-const API_URL = process.env.NODE_ENV === 'production'
-  ? 'https://server-rbpl.onrender.com'
-  : 'http://localhost:3001';
+const API_URL = 'https://server-rbpl.onrender.com';
 
 export const login = async (email, password) => {
   try {

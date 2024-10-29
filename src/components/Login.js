@@ -11,14 +11,14 @@ function Login() {
   const navigate = useNavigate();
 
   // Define API URL based on environment
-  const API_URL = process.env.NODE_ENV === 'production'
-    ? 'https://server-rbpl.onrender.com'
-    : 'http://localhost:3001';
+  const API_URL = 'https://server-rbpl.onrender.com';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
     setLoading(true);
+
+    console.log('Attempting login to:', `${API_URL}/api/login`);
 
     try {
       const response = await axios.post(`${API_URL}/api/login`, {
@@ -30,6 +30,8 @@ function Login() {
         }
       });
 
+      console.log('Login response:', response.data);
+
       if (response.data.success) {
         localStorage.setItem('token', response.data.token);
         navigate('/dashboard');
@@ -37,7 +39,11 @@ function Login() {
         setError(response.data.error || 'Login failed');
       }
     } catch (err) {
-      console.error('Login error:', err);
+      console.error('Login error details:', {
+        message: err.message,
+        response: err.response,
+        request: err.request
+      });
       setError(err.response?.data?.error || 'Network error. Please try again.');
     } finally {
       setLoading(false);

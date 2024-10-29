@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.530361bd.css",
+    "main.js": "/static/js/main.b5e09204.js",
+    "static/media/gold-coin.png": "/static/media/gold-coin.47c0268b83d473041c0e.png",
+    "index.html": "/index.html",
+    "main.530361bd.css.map": "/static/css/main.530361bd.css.map",
+    "main.b5e09204.js.map": "/static/js/main.b5e09204.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.530361bd.css",
+    "static/js/main.b5e09204.js"
+  ]
+}
