@@ -1,4 +1,4 @@
-# Dependencies
+# Dependencies --  DONEE
 /node_modules
 
 # Production build
@@ -62,3 +62,7 @@ jspm_packages/
 
 # Yarn Integrity file
 .yarn-integrity
+
+# Google Sheets API credentials
+/config/credentials.json
+credentials.json
