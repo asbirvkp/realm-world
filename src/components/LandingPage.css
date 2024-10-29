@@ -1,0 +1,1179 @@
+/* Landing Page Container */
+.landing-page {
+  background-color: #0f1115;
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Header Styles */
+.landing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: relative;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+
+.logo-link:hover {
+  opacity: 0.9;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Navigation Styles */
+.desktop-nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px;
+}
+
+.desktop-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.desktop-nav a:hover {
+  color: #4CAF50;
+}
+
+.desktop-nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #4CAF50;
+  transition: width 0.3s ease;
+}
+
+.desktop-nav a:hover::after {
+  width: 100%;
+}
+
+/* Auth Buttons */
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.login-button, .signup-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.login-button {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.signup-button {
+  background-color: #ffffff;
+  color: #0f1115;
+  transition: all 0.3s ease;
+}
+
+.signup-button:hover {
+  background-color: #4CAF50;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section */
+.hero {
+  background: #0f1115;
+  text-align: center;
+  padding: 30px 20px;
+  min-height: 90vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(45deg, rgba(76, 175, 80, 0.03) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(76, 175, 80, 0.03) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(76, 175, 80, 0.03) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(76, 175, 80, 0.03) 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.hero-content {
+  max-width: 1000px;  /* Reduced max-width */
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 56px;
+  line-height: 1.2;
+  margin-bottom: 60px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.highlight {
+  color: #4CAF50;
+}
+
+.trading-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* Changed from 3 to 2 columns */
+  gap: 20px;
+  max-width: 800px;  /* Adjust this value based on your needs */
+  margin: 40px auto;  /* Centers the grid horizontally */
+  justify-content: center;
+}
+
+.trading-card {
+  background: #242830;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.trading-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.card-icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(76, 175, 80, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+.card-icon i {
+  color: #4CAF50;
+  font-size: 14px;
+}
+
+.card-title h3 {
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0 0 4px;
+  font-weight: 500;
+}
+
+.card-title p {
+  color: #b0b0b0;
+  font-size: 12px;
+  margin: 0;
+}
+
+.card-stats {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.stat-value {
+  display: block;
+  color: #4CAF50;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  color: #b0b0b0;
+  font-size: 12px;
+}
+
+.card-action {
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 8px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 13px;
+}
+
+.card-action:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.card-action i {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.card-action:hover i {
+  transform: translateX(4px);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .hero h2 {
+    font-size: 48px;
+  }
+
+  .trading-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .hero-content {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 20px 15px;  /* Reduced top padding significantly */
+  }
+
+  .hero h2 {
+    font-size: 32px;
+    margin-bottom: 30px;  /* Reduced margin */
+    padding-top: 10px;   /* Add some space from the header */
+  }
+
+  .trading-cards {
+    margin: 20px auto;   /* Reduced margin */
+    gap: 15px;          /* Slightly reduced gap between cards */
+  }
+
+  .hero-content {
+    padding-top: 0;     /* Remove any extra padding */
+  }
+
+  /* Card layout adjustments */
+  .trading-card {
+    text-align: center;  /* Center all content in card */
+    padding: 12px;      /* Slightly reduce padding */
+  }
+
+  .card-header {
+    justify-content: center;  /* Center header content */
+    align-items: center;      /* Center vertically */
+    flex-direction: column;   /* Stack icon above text */
+    gap: 8px;                /* Space between icon and text */
+  }
+
+  .card-icon {
+    width: 32px;
+    height: 32px;
+    margin: 0 auto 4px;  /* Center icon and add bottom margin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-title {
+    text-align: center;  /* Center title text */
+  }
+
+  .card-title h3 {
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+
+  .card-title p {
+    font-size: 11px;
+  }
+
+  .card-stats {
+    margin: 12px 0;  /* Adjust vertical spacing */
+  }
+
+  .stat-value {
+    font-size: 20px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .hero {
+    padding: 15px 15px;  /* Even smaller padding */
+  }
+
+  .hero h2 {
+    margin-bottom: 25px;
+  }
+}
+
+/* Features Section */
+.features {
+  padding: 120px 20px 80px;
+  background-color: #1a1d24;
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.section-title h2 {
+  font-size: 42px;
+  color: #ffffff;
+  margin: 0;
+  padding: 20px;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.feature-card {
+  background-color: #242830;
+  padding: 30px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 40px;
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.feature-card p {
+  color: #b0b0b0;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.mobile-buttons {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .desktop-nav, .auth-buttons.desktop {
+    display: none;
+  }
+
+  .mobile-buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .login-button.mobile {
+    padding: 8px 15px;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  .hero {
+    padding: 140px 20px;
+    min-height: 70vh;
+  }
+
+  .hero h2 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 16px;
+    max-width: 600px;
+    padding: 0 20px;
+  }
+
+  .features {
+    padding: 100px 20px 60px;
+  }
+
+  .section-title {
+    margin-bottom: 60px;
+  }
+
+  .section-title h2 {
+    font-size: 36px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .landing-header {
+    padding: 20px;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1d24;
+    padding: 20px;
+  }
+
+  .mobile-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #2a2e35;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-nav a:hover {
+    color: #4CAF50;
+    padding-left: 10px;
+    background-color: rgba(76, 175, 80, 0.1);
+  }
+
+  .mobile-nav a:last-child {
+    border-bottom: none;
+  }
+
+  .hero {
+    padding: 120px 10px;
+    min-height: 60vh;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+    padding: 0 15px;
+  }
+
+  .hero p {
+    font-size: 15px;
+    max-width: 100%;
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+
+  .features {
+    padding: 80px 15px 40px;
+  }
+
+  .section-title {
+    margin-bottom: 40px;
+  }
+
+  .section-title h2 {
+    font-size: 32px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Card header and icon adjustments for mobile */
+  .card-header {
+    align-items: flex-start;  /* Align items to top */
+    gap: 10px;  /* Reduce space between icon and text */
+  }
+
+  .card-icon {
+    width: 28px;     /* Slightly smaller icon container */
+    height: 28px;    /* Slightly smaller icon container */
+    min-width: 28px; /* Prevent icon from shrinking */
+    border-radius: 6px;
+    margin-top: 2px; /* Fine-tune vertical alignment */
+  }
+
+  .card-icon i {
+    font-size: 14px;  /* Smaller icon size */
+  }
+
+  /* Keep existing mobile text sizes */
+  .card-title h3 {
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+
+  .card-title p {
+    font-size: 11px;
+  }
+}
+
+/* Small Mobile Responsive */
+@media (max-width: 480px) {
+  .hero {
+    padding: 100px 10px;
+    min-height: 50vh;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+}
+
+/* How It Works Section */
+.how-it-works {
+  padding: 120px 20px 80px;
+  background-color: #0f1115;
+  text-align: center;
+}
+
+.how-it-works h2 {
+  font-size: 42px;
+  color: #ffffff;
+  margin-bottom: 80px;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.step-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #242830;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  font-size: 32px;
+  color: #4CAF50;
+}
+
+.step h3 {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.step p {
+  color: #b0b0b0;
+  line-height: 1.6;
+  font-size: 16px;
+  max-width: 300px;
+}
+
+/* Responsive Styles for How It Works */
+@media (max-width: 1024px) {
+  .how-it-works {
+    padding: 100px 20px 60px;
+  }
+
+  .how-it-works h2 {
+    font-size: 36px;
+    margin-bottom: 60px;
+  }
+
+  .steps-container {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .how-it-works {
+    padding: 80px 15px 40px;
+  }
+
+  .how-it-works h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .steps-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .step {
+    padding: 0 20px;
+  }
+
+  .step h3 {
+    font-size: 20px;
+  }
+
+  .step p {
+    font-size: 14px;
+  }
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 120px 20px 80px;
+  background-color: #1a1d24;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 42px;
+  color: #ffffff;
+  margin-bottom: 60px;
+}
+
+.testimonials-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background-color: #242830;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-text {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  color: #4CAF50;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Responsive Styles for Testimonials */
+@media (max-width: 1024px) {
+  .testimonials {
+    padding: 100px 20px 60px;
+  }
+
+  .testimonials h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .testimonial-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 80px 15px 40px;
+  }
+
+  .testimonials h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .testimonials-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .testimonial-card {
+    padding: 30px;
+  }
+
+  .testimonial-text {
+    font-size: 15px;
+  }
+
+  .testimonial-author {
+    font-size: 14px;
+  }
+}
+
+/* Call to Action Section */
+.cta-section {
+  padding: 120px 20px;
+  background-color: #0f1115;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 42px;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.cta-card {
+  background-color: #242830;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.cta-card h3 {
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.cta-card p {
+  color: #b0b0b0;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #4CAF50;
+  color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button i {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover i {
+  transform: translateX(5px);
+}
+
+/* Responsive Styles for CTA Section */
+@media (max-width: 1024px) {
+  .cta-section {
+    padding: 100px 20px;
+  }
+
+  .cta-section h2 {
+    font-size: 36px;
+  }
+
+  .cta-card h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 80px 15px;
+  }
+
+  .cta-section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .cta-card {
+    padding: 30px 20px;
+  }
+
+  .cta-card h3 {
+    font-size: 22px;
+  }
+
+  .cta-card p {
+    font-size: 15px;
+  }
+
+  .cta-button {
+    padding: 12px 25px;
+    font-size: 15px;
+  }
+}
+
+/* Footer Section */
+.footer {
+  background-color: #1a1d24;
+  padding: 80px 20px 30px;
+  color: #ffffff;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.footer-section h4 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+  color: #b0b0b0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 16px;
+}
+
+.footer-section ul li a:hover {
+  color: #4CAF50;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #2a2e35;
+}
+
+.footer-bottom p {
+  color: #b0b0b0;
+  font-size: 14px;
+}
+
+/* Responsive Styles for Footer */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 60px 20px 30px;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 15px 20px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .footer-section h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .footer-section ul li a {
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    padding-top: 20px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
+}
+
+/* Add a class for negative values if needed */
+.stat-value.negative {
+  color: #ff4444;  /* Red for losses */
+}
+
+/* Update card title styling */
+.card-title h3 {
+  font-size: 18px;
+  color: #ffffff;
+  margin: 0 0 4px;
+  font-weight: 600;
+}
+
+.card-title p {
+  color: #b0b0b0;
+  font-size: 13px;
+}
+
+/* Update icon colors to match the theme */
+.card-icon {
+  background: rgba(76, 175, 80, 0.1);
+}
+
+.card-icon i {
+  color: #4CAF50;
+  font-size: 20px;
+}
+
+/* Common background pattern for all sections */
+.hero,
+.how-it-works,
+.testimonials,
+.cta-section {
+  position: relative;
+  background-color: #0f1115;
+  overflow: hidden;
+}
+
+/* Add the grid pattern overlay to all sections */
+.hero::before,
+.how-it-works::before,
+.testimonials::before,
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(45deg, rgba(76, 175, 80, 0.03) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(76, 175, 80, 0.03) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(76, 175, 80, 0.03) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(76, 175, 80, 0.03) 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  pointer-events: none;
+}
+
+/* Ensure content stays above the pattern */
+.hero-content,
+.how-it-works .section-content,
+.testimonials .section-content,
+.cta-section .section-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Optional: Add subtle separators between sections */
+.how-it-works,
+.testimonials,
+.cta-section {
+  border-top: 1px solid rgba(76, 175, 80, 0.05);
+}
+
+/* Optional: Add slight variation to even/odd sections for more depth */
+.how-it-works,
+.cta-section {
+  background-color: #0d0f13;  /* Slightly darker */
+}
+
+/* Adjust pattern opacity for different sections */
+.testimonials::before {
+  opacity: 0.7;  /* Slightly more visible pattern */
+}
+
+.cta-section::before {
+  opacity: 0.5;  /* Medium visibility pattern */
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 30px;  /* Significantly reduced top padding */
+    padding-bottom: 30px;
+  }
+
+  .hero-content {
+    padding-top: 70px;
+    padding-bottom: 0px;
+  }
+
+  .hero h2 {
+    margin-top: 0;      /* Remove top margin */
+    margin-bottom: 50px; /* Keep some space before cards */
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 10px;  /* Even less padding for smaller screens */
+  }
+}
+
+/* Only add these styles inside the existing mobile media query */
+@media (max-width: 768px) {
+  .card-title h3 {
+    font-size: 14px;  /* Reduced from 18px */
+    margin-bottom: 2px;
+  }
+
+  .card-title p {
+    font-size: 11px;  /* Reduced from 13px */
+  }
+
+  .stat-value {
+    font-size: 20px;  /* Reduced from 24px */
+  }
+
+  .stat-label {
+    font-size: 11px;  /* Reduced from 12px */
+  }
+
+  .card-action {
+    font-size: 12px;  /* Reduced from 13px */
+    padding: 6px;     /* Slightly reduced padding */
+  }
+}
+
+@media (max-width: 768px) {
+  .trading-card {
+    padding: 12px;
+  }
+
+  .card-header {
+    display: flex;
+    flex-direction: row;    /* Horizontal layout */
+    align-items: center;    /* Center items vertically */
+    gap: 8px;              /* Space between icon and text */
+    text-align: left;      /* Left align text */
+    padding: 8px;          /* Add some padding */
+  }
+
+  .card-icon {
+    width: 24px;          /* Smaller icon size */
+    height: 24px;
+    min-width: 24px;      /* Prevent icon shrinking */
+    border-radius: 50%;   /* Make it circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(76, 175, 80, 0.1);
+  }
+
+  .card-icon i {
+    font-size: 12px;     /* Smaller icon */
+    color: #4CAF50;
+  }
+
+  .card-title {
+    text-align: left;    /* Left align title text */
+  }
+
+  .card-title h3 {
+    font-size: 14px;
+    margin-bottom: 2px;
+    color: #ffffff;
+  }
+
+  .card-title p {
+    font-size: 11px;
+    color: #b0b0b0;
+    margin: 0;
+  }
+
+  /* Keep stats centered */
+  .card-stats {
+    text-align: center;
+    margin: 12px 0;
+  }
+}

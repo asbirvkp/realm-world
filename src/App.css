@@ -1,0 +1,76 @@
+/* ----------------------------------------------------------------------------------------------------- */
+/*                             Base styles (for all screen sizes)                                        */
+/* ----------------------------------------------------------------------------------------------------- */
+
+/* General app styling */
+.App {
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  padding-bottom: 20px;
+}
+
+/* Button styles */
+.btn-outline {
+  padding: 10px 20px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-family: 'Nunito', sans-serif;
+}
+
+.btn-outline:hover {
+  background-color: #ffffff;
+  color: #131315;
+}
+
+/* Balance Display styles */
+.balance-display {
+  background-color: #1E1F25;
+  color: white;
+  padding: 10px; /* Reduced padding */
+  margin-top: 30px; /* Adjust this value based on your header height */
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  height: 180px; /* Set a specific height */
+}
+
+.balance-display h3.balance-amount {
+  font-size: 1.3em;
+  margin: 10px 0;
+  padding-top: 10px;
+  background: linear-gradient(45deg, #6cdb00, #4caf50);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.balance-display p {
+  margin: 10px 0;
+  font-size: 0.8em;
+  color: #A9A9A9;
+}
+
+.balance-display .earnings {
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: 14px;
+}
+
+.balance-display .earnings.green {
+  color: #10B981;
+}
+
+.balance-display .earnings.red {
+  color: #FF0000;
+}
+
+/* ----------------------------------------------------------------------------------------------------- */
+/*                             Mobile styles (below 768px)                                               */
+/* ----------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  /* Mobile-specific styles that are not header-related can go here */
+}

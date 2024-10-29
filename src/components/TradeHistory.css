@@ -1,0 +1,135 @@
+.trade-history {
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  background-color: #1E1F25;
+  border-radius: 10px;
+  width: 760px;
+  max-width: 90%;
+  margin: 20px auto;
+}
+
+.trade-history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.trade-history-header h4 {
+  margin: 0;
+  color: #ffffff;
+}
+
+.see-all-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.trade-history-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 2px;
+}
+
+.trade-history-table tr {
+  background-color: #1E1F25;
+}
+
+.trade-history-table td {
+  padding: 8px 15px;
+  vertical-align: middle;
+}
+
+.date-column {
+  color: #8C8C8C;
+  font-size: 14px;
+  width: 25%;
+}
+
+.name-column {
+  width: 50%;
+  text-align: center; /* Center the content */
+  padding-right: 0;
+}
+
+.currency-info {
+  display: inline-flex; /* Change to inline-flex */
+  align-items: center;
+  justify-content: center; /* Center the contents horizontally */
+  position: relative;
+  top: 2px;
+}
+
+.currency-icon {
+  font-size: 16px;
+  width: 16px;
+  margin-right: 8px;
+}
+
+.currency-name {
+  background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.type-column {
+  padding-left: 0;
+  width: 15%;
+}
+
+.trade-type {
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.trade-type.buy {
+  background-color: rgba(14, 203, 129, 0.2);
+  color: #0ECB81;
+}
+
+.trade-type.sell {
+  background-color: rgba(246, 70, 93, 0.2);
+  color: #F6465D;
+}
+
+.pnl-column {
+  text-align: right;
+  font-weight: bold;
+  font-size: 14px;
+  width: 25%;
+}
+
+.pnl-column.positive {
+  color: #0ECB81;
+}
+
+.pnl-column.negative {
+  color: #F6465D;
+}
+
+@media (max-width: 768px) {
+  .trade-history {
+    width: 95%;
+  }
+
+  .trade-history-table td {
+    padding: 6px 10px;
+  }
+
+  .currency-icon {
+    font-size: 14px;
+  }
+
+  .trade-type {
+    padding: 2px 4px;
+    font-size: 10px;
+  }
+}

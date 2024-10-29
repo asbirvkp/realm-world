@@ -1,0 +1,394 @@
+/* Header styles */
+.header {
+  background-color: #17181C;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  position: relative;
+  padding-top: 60px; /* Adjust this value based on the height of your WalletButton */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 15px; /* Increased padding from 5px to 10px */
+  position: relative;
+  height: 60px; /* Added a fixed height */
+  padding: 1rem;
+  background-color: #1E2329;
+}
+
+.logo {
+  color: #ffffff;
+  margin: 0;
+  font-size: 0.1rem; /* Reduced from 1rem */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+  padding-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    padding: 15px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+ 
+
+  .wallet-button-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001;
+  }
+
+  .menu-toggle {
+    right: 15px;
+  }
+
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #1E1F25;
+  }
+
+  .navbar.open {
+    display: block;
+  }
+
+  .navbar-list {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    padding-left: 20px;
+    margin: 0;
+    width: 100%;
+  }
+
+  .navbar-link {
+    display: block;
+    padding: 15px 0;
+    color: #B0B0B0;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Add this new rule to increase padding-right for Trade History link */
+  .navbar-link.trade-history-link {
+    padding-right: 30px; /* Adjust this value as needed */
+  }
+
+  /* Add this new rule to increase padding-right */
+  .navbar-list li {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Adjust the active link style if needed */
+  .navbar-link.active {
+    color: rgb(0, 123, 255);
+    font-weight: bold;
+  }
+
+  .navbar-list li {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Hide the wallet button inside the navbar for mobile */
+  .navbar-list .wallet-button-wrapper {
+    display: none;
+  }
+}
+
+.nav-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding-right: 10px;
+}
+
+.menu-toggle {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  padding-bottom: 60px;
+  padding-right: 0px;
+  z-index: 1000;
+}
+
+.menu-toggle:focus {
+  outline: none;
+}
+
+.menu-toggle .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle.open .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Remove the .bar styles as they're no longer needed */
+
+
+
+.navbar {
+  display: none;
+}
+
+.navbar.open {
+  display: block;
+}
+
+.navbar-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 80px;
+  display: flex;
+}
+
+.navbar-link {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+  color: #007bff;
+}
+
+/* Hide mobile menu toggle by default */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #f0f0f0; /* Off-white color */
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav-center {
+    justify-content: center;
+  }
+  .logo {
+    font-size: 1rem; /* Default size for larger screens */
+    padding-right: 0px;
+  }
+  .menu-toggle {
+    display: flex;
+    padding-right: 25px;
+    padding-left: 50px;
+    /* Other existing styles */
+  }
+  
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #1E1F25;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .navbar.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar-list {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .navbar-link {
+    display: block;
+    padding: 15px 0;
+    color: #B0B0B0;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-link:hover,
+  .navbar-link.active {
+    background-color: #2A2C34;
+    color: #FFFFFF;
+  }
+
+  .navbar-list li:not(:last-child) .navbar-link {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}
+
+@media (min-width: 769px) {
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  .navbar-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .navbar-link {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #B0B0B0;
+    transition: color 0.3s ease;
+  }
+
+  /* Add this new rule for the Dashboard link */
+  .navbar-link[href="/"] {
+    padding-right: 190px; /* Adjust this value as needed */
+    padding-left: 10px;
+  }
+
+  .navbar-link:hover,
+  .navbar-link.active {
+    color: #FFFFFF;
+  }
+
+  .wallet-button-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .navbar-container {
+    justify-content: center;
+  }
+}
+
+/* Temporarily increase size for visibility */
+.menu-toggle {
+  transform: scale(1.5);
+}
+
+/* Remove or comment out these conflicting styles at the bottom of the file */
+/*
+.menu-toggle {
+  position: fixed !important;
+  top: 10px !important;
+  left: 10px !important;
+  padding: 10px !important;
+}
+*/
+
+/* Updated toggle button styles */
+.menu-toggle {
+  /* ... existing styles ... */
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle.open i {
+  transform: rotate(90deg);
+}
+
+.trade-history-link {
+  padding-left: -20px; /* Keep left padding as before */
+  padding-right: 100px; /* Reduced right padding to match Dashboard */
+}
+
+.navbar-link.trade-history-link {
+  padding-right: 120px; /* Adjust this value as needed */
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 60px; /* Adjust if needed to position correctly */
+  right: 0;
+  background-color: #1E1F25;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* This centers the items vertically */
+  height: 100vh; /* This makes the dropdown full height of the viewport */
+}
+
+.navbar-toggle .navbar-link {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+}

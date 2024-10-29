@@ -1,0 +1,412 @@
+/* Add this new rule at the top of the file or where appropriate */
+
+
+.trade-history {
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: rgba(30, 31, 37, 0.6); /* Semi-transparent background */
+  border-radius: 16px;
+  width: 760px;
+  max-width: 90%;
+  margin: 20px auto;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.trade-history-header {
+  margin-top: -5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trade-history-header h4 {
+  margin: 0;  /* Remove default margins from the h4 */
+}
+
+.trade-history h2 {
+  margin: 0;
+}
+
+
+.trade-history-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.trade-history-table th,
+.trade-history-table td {
+
+  padding-top: 0px;
+  text-align: left;
+  color: #FFFFFF; /* Ensure the text is white */
+}
+
+/* Add this new rule for table headers */
+.trade-history-table th {
+  font-weight: bold;
+  background-color: #2A2C34; /* Slightly lighter background for headers */
+}
+
+/* Adjust column widths and alignments */
+.trade-history-table th:nth-child(1),
+.trade-history-table td:nth-child(1) {
+  width: 25%; /* Date column */
+}
+
+.trade-history-table th:nth-child(2),
+.trade-history-table td:nth-child(2) {
+  width: 50%; /* Name column */
+  text-align: center; /* Center align the content */
+}
+
+.trade-history-table th:nth-child(3),
+.trade-history-table td:nth-child(3) {
+  width: 25%; /* PNL column */
+  text-align: right; /* Align PNL to the right */
+}
+
+/* Center align the content within the Name column */
+.trade-history-table td:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 25%; /* Add left padding */
+}
+
+/* Adjust the currency icon and name spacing */
+.currency-icon {
+  margin-right: 5px;
+  width: 15px;
+}
+
+.currency-name {
+  margin-right: 5px;
+  background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+/* Style for the trade type */
+.trade-type {
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.trade-type.buy {
+  background: rgba(14, 203, 129, 0.15);
+  color: #0ECB81;
+  border: 1px solid rgba(14, 203, 129, 0.3);
+}
+
+.trade-type.sell {
+  background: rgba(246, 70, 93, 0.15);
+  color: #F6465D;
+  border: 1px solid rgba(246, 70, 93, 0.3);
+}
+
+.trade-pnl {
+  font-weight: bold;
+}
+
+.trade-pnl.positive {
+  color: #4CAF50;
+}
+
+.trade-pnl.negative {
+  color: #FF5252;
+}
+
+.chart-placeholder {
+  width: 100px;
+  height: 30px;
+  background-color: #2A2C34;
+  border-radius: 4px;
+}
+
+/* Responsive styles */
+@media (max-width: 1023px) {
+  .trade-history {
+    width: 90%;
+  }
+}
+
+/* Small screens and mobile view */
+@media (max-width: 767px) {
+  .trade-history {
+    width: 98%; /* Set width to 98% for mobile view */
+    padding: 15px; /* Slightly reduced padding for smaller screens */
+  }
+}
+
+@media (max-width: 664px) {
+  .trade-history {
+    padding: 15px; /* Optionally reduce padding for mobile */
+    padding-bottom: 25px; 
+    max-width: 90%; /* Adjust bottom padding for smaller screens */
+  }
+
+  .trade-history-table {
+    min-width: auto; /* Remove min-width for small screens */
+  }
+
+  .trade-history-table th:nth-child(4),
+  .trade-history-table th:nth-child(5),
+  .trade-history-table td:nth-child(4),
+  .trade-history-table td:nth-child(5) {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .trade-history-table {
+    font-size: 1rem;
+  }
+
+  .trade-history-table th,
+  .trade-history-table td {
+    padding: 10px 8px;
+  }
+}
+
+.trade-history-table td.date {
+  color: #808080; /* Grey color for the date */
+}
+
+.trade-history-table td:first-child {
+  font-size: 0.85em; /* Reduce font size */
+  color: #808080; /* Light grey color */
+  white-space: nowrap; /* Prevent date from wrapping */
+}
+
+/* Optionally, adjust padding for the date column */
+.trade-history-table td:first-child,
+.trade-history-table th:first-child {
+  padding-right: 10px; /* Reduce right padding */
+}
+
+/* Add hover effects for trade history table rows */
+.trade-history-table tbody tr {
+  transition: all 0.3s ease;
+  background-color: rgba(30, 31, 37, 0.6);
+}
+
+.trade-history-table tbody tr:hover {
+  background-color: rgba(50, 51, 57, 0.65);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trade-history-table td {
+  transition: color 0.3s ease;
+  padding: 12px 15px;
+}
+
+.trade-history-table tr:hover td {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.trade-history-table tr:hover td:first-child {
+  color: rgba(176, 176, 176, 0.9);
+}
+
+/* Ensure the trade type background doesn't change on hover */
+.trade-history-table tr:hover .trade-type.buy {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #4CAF50;
+}
+
+.trade-history-table tr:hover .trade-type.sell {
+  background-color: rgba(255, 82, 82, 0.2);
+  color: #FF5252;
+}
+
+/* Responsive styles */
+@media (max-width: 664px) {
+  .trade-history-table tbody tr:hover {
+    transform: none; /* Remove the lift effect on small screens */
+  }
+}
+
+/* Style for all currency names in the Names column */
+.trade-history-table .currency-name {
+  color: #8e83f792; /* This is a gold color */
+  font-weight: normal;
+}
+
+/* You can keep or remove this specific style for XAUUSD if you want it to look different */
+.trade-history-table .currency-name.xauusd {
+  /* color: #DAA520; */ /* Goldenrod, if you want XAUUSD to be slightly different */
+}
+
+/* New styles for mobile view */
+@media (max-width: 768px) {
+  .trade-history-container {
+    width: 95%; /* Increase width to 95% for mobile view */
+    margin: 0 auto; /* Center the container */
+    padding: 10px; /* Adjust padding as needed */
+  }
+
+  .trade-history-table {
+    width: 100%; /* Make sure the table takes full width of the container */
+  }
+
+  .trade-history-table th,
+  .trade-history-table td {
+    padding: 8px 5px; /* Reduce padding for smaller screens */
+  }
+
+  /* ... other mobile-specific styles ... */
+}
+
+.see-all-link {
+  color: white; /* White text color */
+  font-weight: bold; /* Bold text */
+  text-decoration: none; /* Remove underline by default */
+  transition: color 0.3s, text-decoration 0.3s; /* Smooth transition for hover effects */
+  font-size: 0.8em; /* Reduce font size (adjust as needed) */
+}
+
+.see-all-link:hover {
+  color: #594caf; /* Change color on hover (adjust to match your theme) */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* Add left padding to only the Date column header */
+.trade-history-table th:first-child {
+  padding-left: 10px; /* Adjust this value as needed */
+}
+
+/* Add right padding to only the PNL column header */
+.trade-history-table th:last-child {
+  padding-right: 20px; /* Adjust this value as needed */
+  text-align: right; /* Align the text to the right */
+}
+
+.currency-name.gold-gradient {
+  background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+.trade-history-table tr {
+  background-color: #1E1F25;
+}
+
+.trade-history-table td {
+  padding: 8px 15px;
+  vertical-align: middle;
+}
+
+.date-column {
+  color: #8C8C8C;
+  font-size: 14px;
+  width: 25%;
+}
+
+.name-column {
+  width: 50%;
+  text-align: left;
+  padding-right: 0;
+}
+
+.currency-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.currency-icon {
+  font-size: 16px;
+  width: 16px;
+  margin-right: 8px;
+}
+
+.currency-name {
+  background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.trade-type {
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.trade-type.buy {
+  background: rgba(14, 203, 129, 0.15);
+  color: #0ECB81;
+  border: 1px solid rgba(14, 203, 129, 0.3);
+}
+
+.trade-type.sell {
+  background: rgba(246, 70, 93, 0.15);
+  color: #F6465D;
+  border: 1px solid rgba(246, 70, 93, 0.3);
+}
+
+.pnl-column {
+  text-align: right;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.pnl-column.positive {
+  color: #0ECB81;
+  text-shadow: 0 0 20px rgba(14, 203, 129, 0.3);
+}
+
+.pnl-column.negative {
+  color: #F6465D;
+  text-shadow: 0 0 20px rgba(246, 70, 93, 0.3);
+}
+
+@media (max-width: 768px) {
+  .trade-history {
+    width: 95%;
+  }
+
+  .trade-history-table td {
+    padding: 6px 10px;
+  }
+
+  .currency-icon {
+    font-size: 14px;
+  }
+
+  .trade-type {
+    padding: 2px 4px;
+    font-size: 10px;
+  }
+}
+
+.trade-history-table td {
+  padding: 12px;
+  background: rgba(30, 31, 37, 0.8);
+}
+
+.trade-history-table td:first-child {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.trade-history-table td:last-child {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
