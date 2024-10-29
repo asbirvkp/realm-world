@@ -544,7 +544,8 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
-  margin-bottom: 5px;
+  margin-bottom: 15px; /* Increased from 5px */
+  transform: translateY(-8px); /* Added to move value up */
 }
 
 .value {
@@ -555,6 +556,14 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.value.negative {
+  background: linear-gradient(to right, #ff4444, #ff6666);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(255, 68, 68, 0.3);
 }
 
 .profit-label {

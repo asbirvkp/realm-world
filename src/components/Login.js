@@ -11,9 +11,9 @@ function Login() {
   const navigate = useNavigate();
 
   // Define API URL based on environment
-  const API_URL = process.env.NODE_ENV === 'development' 
-    ? 'http://localhost:3001' 
-    : 'your-production-url';
+  const API_URL = process.env.NODE_ENV === 'production'
+    ? 'https://server-rbpl.onrender.com'
+    : 'http://localhost:3001';
 
   const handleSubmit = async (e) => {
     e.preventDefault();

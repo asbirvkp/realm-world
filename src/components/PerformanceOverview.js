@@ -57,7 +57,6 @@ function PerformanceOverview() {
               <span className={`value ${parseFloat(data.value) >= 0 ? 'positive' : 'negative'}`}>
                 {parseFloat(data.value) >= 0 ? '+' : ''}{data.value}%
               </span>
-              <span className="profit-label">Profit</span>
             </div>
           </div>
         ))}
