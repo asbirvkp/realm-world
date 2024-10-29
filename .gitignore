@@ -1,5 +1,10 @@
 # Dependencies --  DONEE
 /node_modules
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
 
 # Production build
 /build
