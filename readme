@@ -1,0 +1,37 @@
+complete client folder structure
+----------------------------------
+
+client/
+├── node_modules/            # Dependencies directory
+│
+├── public/
+│   ├── favicon.ico
+│   ├── index.html          # Main HTML file (lines 1-49)
+│   ├── logo192.png
+│   ├── logo512.png
+│   └── manifest.json       # Web app manifest (lines 1-26)
+│
+├── src/
+│   ├── components/
+│   │   ├── Header.css      # Header component styles
+│   │   ├── Header.js       # Header component
+│   │   ├── Login.js        # Login component
+│   │   ├── PerformanceOverview.js
+│   │   ├── TradeHistory.js
+│   │   └── WalletButton.js
+│   │
+│   ├── services/
+│   │   └── api.js          # API service functions
+│   │
+│   ├── styles/
+│   │   └── Header.css      # Global header styles
+│   │
+│   ├── App.js              # Main App component
+│   ├── App.css             # Main app styles (lines 1-37)
+│   ├── index.js            # Entry point (lines 1-11)
+│   └── index.css           # Global styles (lines 1-26)
+│
+├── .env                    # Environment variables (gitignored)
+├── .gitignore             # Git ignore configurations (lines 1-69)
+├── package-lock.json       # Dependency lock file
+└── package.json           # Project configuration (lines 1-77)
