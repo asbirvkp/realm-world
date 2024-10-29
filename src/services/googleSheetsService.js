@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3001';  // Use local server for now
+const API_URL = process.env.NODE_ENV === 'production'
+  ? 'https://server-rbpl.onrender.com'
+  : 'http://localhost:3001';
 
 const CACHE_DURATION = 30000; // 30 seconds cache
 let cache = {
